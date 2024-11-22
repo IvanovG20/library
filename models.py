@@ -102,6 +102,8 @@ class Library():
             print(f'Книга с id {book_id} не найдена')
         else:
             if status in ['в наличии', 'выдана']:
+                if book.status == status:
+                    return print('У книги уже такой статус')
                 book.status = status
                 self.save_books()
                 print(f'Статус книги с id {book_id} обновлён на {status}')
