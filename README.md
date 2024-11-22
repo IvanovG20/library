@@ -1,4 +1,4 @@
-### Система управления библиотекой
+## Система управления библиотекой
 
 Консольное приложение для управления библиотекой книг. Приложение позволяет
 добавлять, удалять и отображать книги. 
@@ -14,33 +14,32 @@ Book и класс для управления библиотекой Library.
 
 Функция загрузки книг из файла с данными:
 ```
-load_books
+def load_books(self)
 ```
 Функция сохранения книг в файл с данными:
 ```
-save_books
+def save_books(self)
 ```
 Функция добавления книги в библиотеку:
 ```
-add_book
+def add_book(self, title: str, author: str, year: int)
 ```
 Функция удаления книги из библиотеки:
 ```
-delete_book
+def delete_book(self, book_id: int)
 ```
 Функция отображения книг библиотеки:
 ```
-books_list
+def books_list(self, books: list[Book] = None)
 ```
 Функция поиска книги в библиотеке:
 ```
-search_book
+def search_book(self, param: str, key: str)
 ```
 Функция изменения статуса книги:
 ```
-status_update
+def status_update(self, book_id: int, status: str)
 ```
-
 
 ## Запуск проекта локально
 
@@ -54,4 +53,3 @@ git clone https://github.com/IvanovG20/library.git
 ```
 python main.py
 ```
-
